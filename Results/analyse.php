@@ -1,0 +1,16 @@
+<?
+$ip=$_SERVER['REMOTE_ADDR'];
+$admip="10.9.20.163";
+$admofflineip="127.0.0.1";
+if($ip==$admip||$ip==$admofflineip)
+{
+require_once('flat.php');
+require_once('se.php');
+require_once('scld.php');
+require_once('psp.php');
+}
+else
+{
+header('location:http://10.9.20.163/');
+}
+?>
